@@ -1,0 +1,12 @@
+{
+  "name": "files_express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bicom": "php -S localhost:8000 "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
