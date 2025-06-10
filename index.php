@@ -46,8 +46,8 @@ if (isset($_FILES['image']['name']) && $_FILES['image']['error'] === 0) {
         </h1>
 
           <?php if (isset($send) && $send ==='ok') : ?>
-                <h4 style="text-align: center; ">image envoyez avec succés !</h4>
-                <p>Retrouvez le lien ci-dessous vers votre fichier</p>
+                <h4 style="text-align: center; font-weight: 200;">image envoyez avec succés !</h4>
+                <p style="text-align: center; font-weight: 100;">Retrouvez le lien ci-dessous vers votre fichier</p>
                 <input type="text" class="link" value="http://localhost:8000/uploads/<?= $newpicture ?>" readonly>
             <?php else: ?>
 
