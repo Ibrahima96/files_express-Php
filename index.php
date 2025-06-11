@@ -39,28 +39,29 @@ if (isset($_FILES['image']['name']) && $_FILES['image']['error'] === 0) {
     <section>
 
         <h1>
-            <?php if (isset($send) && $send ==='ok') : ?>
+            <?php if (isset($send) && $send === 'ok') : ?>
                 <img src=" uploads/<?= $newpicture ?>" alt="">
-            
+            <?php else: ?>
+                <i class="fas fa-paper-plane"></i>
             <?php endif ?>
         </h1>
 
-          <?php if (isset($send) && $send ==='ok') : ?>
-                <h4 style="text-align: center; font-weight: 200;">image envoyez avec succés !</h4>
-                <p style="text-align: center; font-weight: 100;">Retrouvez le lien ci-dessous vers votre fichier</p>
-                <input type="text" class="link" value="http://localhost:8000/uploads/<?= $newpicture ?>" readonly>
-            <?php else: ?>
+        <?php if (isset($send) && $send === 'ok') : ?>
+            <h4 style="text-align: center; font-weight: 200;">image envoyez avec succés !</h4>
+            <p style="text-align: center; font-weight: 100;">Retrouvez le lien ci-dessous vers votre fichier</p>
+            <input type="text" class="link" value="http://localhost:8000/uploads/<?= $newpicture ?>" readonly>
+        <?php else: ?>
 
-         <form method="post" action="index.php" enctype="multipart/form-data">
-            <p>
-                <label for="image">Sélectionnez votre fichier</label><br>
-                <input type="file" name="image" id="image">
-            </p>
-            <p id="send">
-                <button type="submit">Envoyer <i class="fas fa-long-arrow-alt-right"></i></button>
-            </p>
-        </form>
-      <?php endif ?>
+            <form method="post" action="index.php" enctype="multipart/form-data">
+                <p>
+                    <label for="image">Sélectionnez votre fichier</label><br>
+                    <input type="file" name="image" id="image">
+                </p>
+                <p id="send">
+                    <button type="submit">Envoyer <i class="fas fa-long-arrow-alt-right"></i></button>
+                </p>
+            </form>
+        <?php endif ?>
     </section>
 
 </body>
